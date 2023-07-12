@@ -1,37 +1,23 @@
-// 변수선언방식
-// 변수만들때 let, const, var차이
-// let 재선언 금지, 재할당 가능
-// const 재선언 금지, 재할당 금지
-// var 재선언 가능, 재할당 가능
+const Team = {
+    RED: "red",
+    BLUE: "blue",
+};
 
-const b = 5;
-const c = 2;
-const d = 1;
+//object는 property를 가진 데이터를 저장, { } 를 사용
 
-let a = b;
-console.log(a);
-let a = c;
-console.log(a);
-//재선언 금지
+const player = {
+    name: "mimi",
+    team: Team.RED,
+    point: 1200,
+};
 
-let a = b;
-a = c;
-console.log(a);
-//재할당은 가능
+console.log(player);
 
-const a = b;
-console.log(a);
-const a = c;
-console.log(a);
-//재선언 금지
+// property를 불러오는 방법
+// 1. console.log(player.name); => tomato
+// 2. console.log(player["name"]); => tomato
 
-const a = b;
-a = c;
-console.log(a);
-//재할당 금지
+// property를 추가하는 방법
+player.lastName = "kim"
 
-var a = b;
-var a = c;
-a = d;
-console.log(a);
-//재선언, 재할당 가능
+console.log(player);
