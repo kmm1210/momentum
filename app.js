@@ -3,21 +3,21 @@ const Team = {
     BLUE: "blue",
 };
 
-//object는 property를 가진 데이터를 저장, { } 를 사용
-
+//object에 함수 추가하는 방법
 const player = {
     name: "mimi",
     team: Team.RED,
     point: 1200,
+    sayHello: function (age) {
+        console.log("age is " + age);
+    }
 };
 
 console.log(player);
+player.sayHello(20)
 
-// property를 불러오는 방법
-// 1. console.log(player.name); => tomato
-// 2. console.log(player["name"]); => tomato
+function sayHello(name) {
+    console.log("hello i'm " + name);
+}
 
-// property를 추가하는 방법
-player.lastName = "kim"
-
-console.log(player);
+sayHello("mimi")
