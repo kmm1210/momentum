@@ -1,23 +1,11 @@
-const Team = {
-    RED: "red",
-    BLUE: "blue",
-};
+//Type 변환 방법
+//typeof 키워드를 쓰면 type 확인
+//prompt();에서 숫자를 입력해도 string type. string이 디폴트
+const age = prompt("how old are you?");
+console.log(typeof age);
 
-//object에 함수 추가하는 방법
-const player = {
-    name: "mimi",
-    team: Team.RED,
-    point: 1200,
-    sayHello: function (age) {
-        console.log("age is " + age);
-    }
-};
+//"숫자"가 아닌게 입력되면 변환이 안됨. NaN(not a number)
+console.log(typeof parseInt(age));
 
-console.log(player);
-player.sayHello(20)
-
-function sayHello(name) {
-    console.log("hello i'm " + name);
-}
-
-sayHello("mimi")
+//숫자인지 판별하는 함수
+console.log(isNaN(age));
