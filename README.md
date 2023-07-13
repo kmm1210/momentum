@@ -14,7 +14,9 @@
 
 ### 라이브러리
 - three.js : 웹페이지에 3D객체를 쉽게 렌더링하도록 도와주는 자바스크립트 3D 라이브러리
- - ml5.js : 보다 더 쉽게 머신러닝을 활용할 수 있도록 만든 ML 라이브러리
+- ml5.js : 보다 더 쉽게 머신러닝을 활용할 수 있도록 만든 ML 라이브러리
+
+<br>
 
 ### 웹에서 JS연습 방법
 컴퓨터에 VSCode를 설치할 수 없다면, replit를 이용하자
@@ -22,5 +24,18 @@ replete.com
 회원가입하기
 상단의 오른쪽 +버튼을 눌러서 언어를 누르고 프로젝트 생성하면 완료!
 
+<br>
 
+#### console.dir(document)와 console.log(document)의 차이점
+dir은 객체의 속성을 확인
+log는 객체의 요소를 확인
 
+<br>
+
+#### JS에서 HTML요소을 불러오는 방법
+- getElementsByClassName() : 많은 element를 가져올때 씀(array를 반환)
+- getElementsByTagName() : name을 할당할 수 있음(array를 반환)
+- querySelector : element를 CSS selector방식으로 검색할 수 있음 
+    - 예) let a = document.querySelector(".txt");
+- querySelectorAll : 일치하는 요소 리스트를 나타내는 NodeList를 반환
+    - 예) let a = document.querySelectorAll(".txt");
