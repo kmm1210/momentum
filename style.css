@@ -1,12 +1,3 @@
-.changeSkyblue {
-    background-color: skyblue;
-  }
-  
-  .changePlum {
-    background-color: plum;
-  }
-  
-  .changeYellow {
-    background-color: yellow;
-  }
-  
+.hidden {
+  display: none;
+}

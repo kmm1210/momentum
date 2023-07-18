@@ -1,16 +1,24 @@
-const body = document.querySelector("body");
+const HIDDEN_CLASSNAME = "hidden";
 
-function handleResize() {
-  const innerWidth = window.innerWidth;
-  const classNames = ["changeSkyblue", "changePlum", "changeYellow"];
+const numberForm = document.querySelector("#number-form");
+const generateInput = numberForm.querySelector("h3 input");
+const guessInput = numberForm.querySelector("h4 input");
+const resultDiv = document.querySelector("#result-div");
+const choseNum = resultDiv.querySelector("h4");
+const result = resultDiv.querySelector("h3");
 
-  if (innerWidth < 400) {
-    body.className = classNames[0];
-  } else if (innerWidth < 800) {
-    body.className = classNames[1];
-  } else {
-    body.className = classNames[2];
-  }
+function randomNumber() {
+  const generateNum = generateInput.value;
+  const randomNum = Math.random() * parseFloat(generateNum);
+  return Math.ceil(randomNum);
+}
+function onPlaySubmit(event) {
+  event.preventDefault();
+  const machineNum = randomNumber();
+  const guessNum = guessInput.value;
+  choseNum.innerText = `You chose:${guessNum} the machine chose:${machineNum}.`;
+  result.innerText = guessNum < machineNum ? "You lost!" : "You won!";
+  resultDiv.classList.remove(HIDDEN_CLASSNAME);
 }
 
-window.addEventListener("resize", handleResize);
+numberForm.addEventListener("submit", onPlaySubmit);
