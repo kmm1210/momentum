@@ -13,16 +13,13 @@ function handleCalChrismas() {
   const diffDays = Math.floor(diffTime / unitDay);
   const strDays = String(diffDays).padStart(2, "0");
 
-  diffTime = diffTime - diffDays * unitDay;
-  const diffHours = Math.floor(diffTime / unitHour);
+  const diffHours =Math.floor((diffTime / unitMinute) % 24);
   const strHours = String(diffHours).padStart(2, "0");
 
-  diffTime = diffTime - diffHours * unitHour;
-  const diffMinutes = Math.floor(diffTime / unitMinute);
+  const diffMinutes = Math.floor((diffTime / unitMinute) % 60);
   const strMinutes = String(diffMinutes).padStart(2, "0");
 
-  diffTime = diffTime - diffMinutes * unitMinute;
-  const diffSeconds = Math.floor(diffTime / unitSecond);
+  const diffSeconds = Math.floor((diffTime / unitSecond) % 60);
   const strSeconds = String(diffSeconds).padStart(2, "0");
 
   clockTitle.innerText = `${strDays}d ${strHours}h ${strMinutes}m ${strSeconds}s`;
